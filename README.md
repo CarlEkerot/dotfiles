@@ -27,4 +27,5 @@ zsh
 ---
 * [prezto](https://github.com/sorin-ionescu/prezto)
 * [fzf](https://github.com/junegunn/fzf)
+* [pyenv](https://github.com/yyuu/pyenv-installer)
 
