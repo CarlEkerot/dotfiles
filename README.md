@@ -23,3 +23,8 @@ i3
 * NetworkManager
 * [xcwd](https://github.com/schischi/xcwd)
 
+zsh
+---
+* [prezto](https://github.com/sorin-ionescu/prezto)
+* [fzf](https://github.com/junegunn/fzf)
+
