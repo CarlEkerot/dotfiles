@@ -21,4 +21,5 @@ i3
 * xdg-utils
 * [i3pystatus](https://github.com/enkore/i3pystatus)
 * NetworkManager
+* [xcwd](https://github.com/schischi/xcwd)
 
