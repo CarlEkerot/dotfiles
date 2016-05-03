@@ -9,9 +9,9 @@ URxvt.scrollTtyOutput: false
 
 ! Font settings
 URxvt.letterspace: -1
-URxvt.font: xft:DejavuSansMono:pixelsize=16
-URxvt.boldFont: xft:DejavuSansMono:bold:pixelsize=16
-URxvt.italicFont: xft:DejavuSansMono:italic:pixelsize=16
+URxvt.font: xft:DejavuSansMono:pixelsize=24
+URxvt.boldFont: xft:DejavuSansMono:bold:pixelsize=24
+URxvt.italicFont: xft:DejavuSansMono:italic:pixelsize=24
 
 ! URL support
 URxvt.url-launcher: sensible-browser
@@ -31,6 +31,9 @@ URxvt.resize-font.smaller: C-minus
 URxvt.resize-font.bigger: C-plus
 URxvt.resize-font.reset: C-0
 URxvt.resize-font.show: C-question
+
+! Make RVM play nicely
+URxvt.loginShell: true
 
 ! Molokai-ish, SublimeText-style colors
 ! Borrowed and slightly modified version of:

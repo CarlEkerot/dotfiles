@@ -1,8 +1,11 @@
 # Set modifier to "win" button
 set $mod Mod4
 
+# HiDPI
+exec "xrandr --dpi 150"
+
 # Font for window titles
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -108,36 +111,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Screen brightness mode, since there's no way to bind the brightness buttons
-# on my laptop
-mode "brightness" {
-        bindsym Up exec xbacklight -inc 20
-        bindsym Down exec xbacklight -dec 20
-
-	bindsym Shift+Up exec xbacklight -inc 1
-	bindsym Shift+Down exec xbacklight -dec 1
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+b mode "brightness"
-
-# Start i3pystatus bar
 bar {
-       status_command python3 ~/.i3/i3pystatus/config.py
-       position top
+        status_command i3status
 }
-
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '5%+'"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '5%-'"
-bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
-
-# Asus specific keyboard brightness bindings 
-bindsym XF86KbdBrightnessDown exec "sudo /etc/acpi/asus-keyboard-backlight.sh down"
-bindsym XF86KbdBrightnessUp exec "sudo /etc/acpi/asus-keyboard-backlight.sh up"
 
 # NetworkManager applet
 exec "nm-applet"
+
+# Sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# Screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
