@@ -22,6 +22,7 @@ i3
 * [i3pystatus](https://github.com/enkore/i3pystatus)
 * NetworkManager
 * [xcwd](https://github.com/schischi/xcwd)
+* [playerctl](https://github.com/acrisci/playerctl)
 
 zsh
 ---
